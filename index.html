@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bite & Bliss — A Tale of Food & Flavor</title>
+  <meta name="description" content="An editorial food recipe sanctuary celebrating 65+ dishes across 10 global cuisines. Inspired by royal storytelling and romantic culinary heritage.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-espresso">
+
+  <!-- 1. STICKY HEADER -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-logo" aria-label="Bite and Bliss Home">
+        Bite <span class="ampersand">&amp;</span> Bliss
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="main-nav" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="recipes.html?category=Indian" class="nav-link">Indian</a></li>
+          <li><a href="recipes.html?category=Italian" class="nav-link">Italian</a></li>
+          <li><a href="recipes.html?category=Chinese" class="nav-link">Chinese</a></li>
+          <li><a href="recipes.html?category=Dessert" class="nav-link">Dessert</a></li>
+          <li><a href="recipes.html?category=Snacks" class="nav-link">Snacks</a></li>
+          <li><a href="recipes.html?category=Healthy" class="nav-link">Healthy</a></li>
+          <li><a href="recipes.html?category=Beverages" class="nav-link">Beverages</a></li>
+        </ul>
+
+        <!-- Mobile Auth Drawer Section -->
+        </nav>
+
+      <!-- Desktop Auth Actions (Updated dynamically via script.js) -->
+      <div class="header-actions" id="headerAuth">
+        <a href="login.html" class="nav-link">Login</a>
+        <a href="register.html" class="btn btn-sm btn-primary">Register</a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="mobile-menu-btn" aria-label="Toggle navigation menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- 2. FULL-BLEED HERO SLIDER SECTION -->
+    <section class="hero-slider-section" aria-label="Featured Story Slider">
+      <div class="hero-slider-track">
+        <!-- Slide 1: Indian Masterpiece -->
+        <div class="hero-slide active">
+          <img 
+            src="https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?auto=format&fit=crop&w=1800&q=85" 
+            alt="Royal Butter Chicken" 
+            class="hero-slide-image"
+          />
+          <div class="hero-overlay"></div>
+          <div class="hero-content">
+            <span class="gold-eyebrow">A TALE OF FOOD</span>
+            <h1 class="hero-title">Bite <span class="ampersand">&amp;</span> Bliss</h1>
+            <p class="hero-subline">Celebrating flavors from around the world. Where every spice carries memory, and every dish tells a story.</p>
+            <a href="#storyChapter" class="btn btn-primary">Begin the Story</a>
+          </div>
+        </div>
+
+        <!-- Slide 2: Italian Tradition -->
+        <div class="hero-slide">
+          <img 
+            src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=1800&q=85" 
+            alt="Artisanal Margherita Pizza" 
+            class="hero-slide-image"
+          />
+          <div class="hero-overlay"></div>
+          <div class="hero-content">
+            <span class="gold-eyebrow">NEAPOLITAN HERITAGE</span>
+            <h2 class="hero-title">Flames of Naples</h2>
+            <p class="hero-subline">Slow-fermented crusts, San Marzano tomatoes, and sweet basil kissed by stone oven embers.</p>
+            <a href="recipe.html?id=11" class="btn btn-primary">Discover the Pizza</a>
+          </div>
+        </div>
+
+        <!-- Slide 3: Decadent Dessert -->
+        <div class="hero-slide">
+          <img 
+            src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=1800&q=85" 
+            alt="Decadent Chocolate Lava Cake" 
+            class="hero-slide-image"
+          />
+          <div class="hero-overlay"></div>
+          <div class="hero-content">
+            <span class="gold-eyebrow">MIDNIGHT SWEETNESS</span>
+            <h2 class="hero-title">The Molten Heart</h2>
+            <p class="hero-subline">Silky Belgian dark cocoa that spills with warmth, creating bliss with every delicate spoonful.</p>
+            <a href="recipe.html?id=25" class="btn btn-primary">Indulge in Dessert</a>
+          </div>
+        </div>
+
+        <!-- Slide 4: Chinese Wok Harmony -->
+        <div class="hero-slide">
+          <img 
+            src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=1800&q=85" 
+            alt="Steaming Ramen Bowl" 
+            class="hero-slide-image"
+          />
+          <div class="hero-overlay"></div>
+          <div class="hero-content">
+            <span class="gold-eyebrow">SIMMERED PERFECTION</span>
+            <h2 class="hero-title">Golden Broth</h2>
+            <p class="hero-subline">Hours of gentle patience, tender wheat noodles, and the quiet comfort of home-cooked warmth.</p>
+            <a href="recipe.html?id=18" class="btn btn-primary">Taste the Ramen</a>
+          </div>
+        </div>
+
+        <!-- Slide 5: Mexican Heritage -->
+        <div class="hero-slide">
+          <img 
+            src="https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?auto=format&fit=crop&w=1800&q=85" 
+            alt="Fiery Tacos al Pastor" 
+            class="hero-slide-image"
+          />
+          <div class="hero-overlay"></div>
+          <div class="hero-content">
+            <span class="gold-eyebrow">FIRE &amp; SPICE</span>
+            <h2 class="hero-title">Ember &amp; Achiote</h2>
+            <p class="hero-subline">Charred sweet pineapple and marinated pork wrapped inside warm heirloom corn tortillas.</p>
+            <a href="recipe.html?id=58" class="btn btn-primary">Taste the Fire</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Arrow Controls -->
+      <button class="hero-nav-arrow prev" aria-label="Previous slide">❮</button>
+      <button class="hero-nav-arrow next" aria-label="Next slide">❯</button>
+
+      <!-- Hero Dot Indicators -->
+      <div class="hero-dots-container" aria-label="Slider navigation dots">
+        <button class="hero-dot active" aria-label="Go to slide 1"></button>
+        <button class="hero-dot" aria-label="Go to slide 2"></button>
+        <button class="hero-dot" aria-label="Go to slide 3"></button>
+        <button class="hero-dot" aria-label="Go to slide 4"></button>
+        <button class="hero-dot" aria-label="Go to slide 5"></button>
+      </div>
+    </section>
+
+    <!-- 3. "WHAT IS BITE & BLISS?" EDITORIAL CHAPTER -->
+    <section id="storyChapter" class="section-padding bg-espresso">
+      <div class="container">
+        <div class="chapter-header">
+          <div class="gold-rule"></div>
+          <span class="gold-eyebrow">OUR STORY</span>
+          <h2 class="chapter-title">Bliss in every bite</h2>
+        </div>
+
+        <div class="story-chapter-content">
+          <div class="story-column">
+            <p>
+              Food is never merely fuel; it is our oldest, most tender human language. In every sizzle of cracked cumin in pure butter, in every slow-simmered reduction of vine-ripened tomatoes, lies an inherited archive of warmth, culture, and memory. Across continents, kitchens remain the true hearths of storytelling.
+            </p>
+            <p>
+              From the vibrant spice bazars of Old Delhi to the sun-soaked olive groves of Tuscany, each ingredient tells of the soil that bore it and the hands that coaxed it into flavor. At Bite &amp; Bliss, we preserve this delicate craft.
+            </p>
+          </div>
+
+          <div class="story-column">
+            <p>
+              We envisioned Bite &amp; Bliss as an intimate gathering place — an editorial sanctuary free from the noise of commerce and rushed takeout. Here, culinary enthusiasts step into a shared library of authentic dishes crafted with unhurried care.
+            </p>
+            <p>
+              Whether you are rolling fresh semolina pasta ribbons on a quiet Sunday afternoon or slow-braising Kashmiri lamb until it yields to a spoon, our recipes guide your senses toward pure harmony.
+            </p>
+          </div>
+        </div>
+
+        <blockquote class="editorial-pullquote">
+          “Bite &amp; Bliss is a place of gathering, of celebrations, where every recipe honors the sacred craft of seasoning, fire, and memory.”
+          <cite>— The Bite &amp; Bliss Promise</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- 4. "THE MASTERPIECES" CHAPTER (BURGUNDY DEEP) -->
+    <section class="section-padding bg-burgundy-deep">
+      <div class="container-wide">
+        <div class="chapter-header">
+          <div class="gold-rule"></div>
+          <span class="gold-eyebrow">CRAFTED ICONS</span>
+          <h2 class="chapter-title">Signature plates &amp; masterpieces</h2>
+          <p class="chapter-subtitle">Six timeless culinary icons celebrated for their balance, depth, and legendary heritage.</p>
+        </div>
+
+        <!-- Dynamic 6-card grid populated by script.js -->
+        <div id="masterpiecesGrid" class="recipe-grid-3"></div>
+
+        <div style="text-align: center; margin-top: 50px;">
+          <a href="recipes.html" class="btn btn-secondary">View all dishes →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. "FROM OUR KITCHEN" CHAPTER (ESPRESSO) -->
+    <section class="section-padding bg-espresso">
+      <div class="container-wide">
+        <div class="chapter-header">
+          <div class="gold-rule"></div>
+          <span class="gold-eyebrow">FROM OUR KITCHEN</span>
+          <h2 class="chapter-title">A feast worth gathering for</h2>
+          <p class="chapter-subtitle">Hand-selected plates from our kitchen to yours, designed for table-side conversation and shared joy.</p>
+        </div>
+
+        <!-- Dynamic 8-card grid populated by script.js -->
+        <div id="kitchenGrid" class="recipe-grid-4"></div>
+
+        <div style="text-align: center; margin-top: 50px;">
+          <a href="recipes.html" class="btn btn-primary">Explore All Recipes</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. "THE TALE SO FAR" — STATS (CHAMPAGNE CONTRAST SECTION) -->
+    <section class="section-padding bg-champagne">
+      <div class="container">
+        <div class="chapter-header">
+          <div class="gold-rule" style="background-color: var(--wine);"></div>
+          <span class="gold-eyebrow" style="color: var(--wine);">OUR JOURNEY</span>
+          <h2 class="chapter-title" style="color: var(--text-espresso);">The tale so far</h2>
+          <p class="chapter-subtitle" style="color: var(--wine);">A growing fellowship of food lovers united by spice, warmth, and kitchen rituals.</p>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-number">65+</div>
+            <div class="stat-label">Dishes on the Menu</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">10</div>
+            <div class="stat-label">Cuisines Gathered</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">1000+</div>
+            <div class="stat-label">Recipes Cooked</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">4.8★</div>
+            <div class="stat-label">Average Guest Rating</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. "SHARE YOUR STORY" CHAPTER (WINE) -->
+    <section class="section-padding bg-wine">
+      <div class="container">
+        <div class="cta-banner">
+          <div class="gold-rule" style="background-color: var(--champagne); opacity: 0.8;"></div>
+          <span class="gold-eyebrow champagne-eyebrow">JOIN THE TABLE</span>
+          <h2 class="chapter-title">Share your own tale</h2>
+          <p>
+            Every family holds a cherished secret — grandmother's unspoken pinch of spice, a slow-roasted marinade, or a Sunday bread that brings everyone home. Add your treasured recipe to the Bite &amp; Bliss archives.
+          </p>
+          <div class="cta-buttons-row">
+            <a href="add-recipe.html" class="btn btn-primary">Add a Recipe</a>
+            <a href="recipes.html" class="btn btn-champagne-outline">Explore Recipes</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. TESTIMONIALS — "A TALE IN GOLD" (ESPRESSO) -->
+    <section class="section-padding bg-espresso">
+      <div class="container">
+        <div class="chapter-header">
+          <div class="gold-rule"></div>
+          <span class="gold-eyebrow">GUEST STORIES</span>
+          <h2 class="chapter-title">A tale in gold</h2>
+          <p class="chapter-subtitle">Reflections from epicures who brought these flavors to life around their own dining tables.</p>
+        </div>
+
+        <div class="testimonials-grid">
+          <article class="testimonial-card">
+            <div class="quote-mark">“</div>
+            <p class="testimonial-text">
+              The Hyderabadi Biryani recipe was a revelation. Cooking on low dum infused our entire home with saffron and cardamom. It felt like dining in an old nawab's courtyard.
+            </p>
+            <div class="testimonial-stars">★★★★★</div>
+            <div class="testimonial-author">Lady Genevieve V. — London</div>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="quote-mark">“</div>
+            <p class="testimonial-text">
+              Making the Spaghetti Carbonara with authentic guanciale and Pecorino Romano changed our family dinners forever. The step-by-step guidance is pure culinary poetry.
+            </p>
+            <div class="testimonial-stars">★★★★★</div>
+            <div class="testimonial-author">Lord Alistair Sterling — Florence</div>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="quote-mark">“</div>
+            <p class="testimonial-text">
+              The Chocolate Lava Cake has become my signature dessert for dinner parties. The molten center turns out impeccable every single time.
+            </p>
+            <div class="testimonial-stars">★★★★★</div>
+            <div class="testimonial-author">Countess Clara Dupuis — Paris</div>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="quote-mark">“</div>
+            <p class="testimonial-text">
+              I appreciate that there are no delivery carts or checkout distractions. It’s an authentic cookbook that treats cooking as an art form rather than a transaction.
+            </p>
+            <div class="testimonial-stars">★★★★★</div>
+            <div class="testimonial-author">Dr. Devendra Roy — Mumbai</div>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="quote-mark">“</div>
+            <p class="testimonial-text">
+              The Hummus with warm pita bread is as silky and luscious as the finest mezze tables in Beirut. The nutrition breakdown was an unexpected delight.
+            </p>
+            <div class="testimonial-stars">★★★★★</div>
+            <div class="testimonial-author">Selena Montgomery — New York</div>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="quote-mark">“</div>
+            <p class="testimonial-text">
+              The Pad Thai balance of sweet palm sugar and sour tamarind captured the authentic street flavors of Bangkok. Truly an extraordinary culinary sanctuary.
+            </p>
+            <div class="testimonial-stars">★★★★★</div>
+            <div class="testimonial-author">Julian Thorne — Sydney</div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 9. FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="brand-logo">
+          Bite <span class="ampersand">&amp;</span> Bliss
+        </a>
+        <p class="footer-tagline">
+          Celebrating flavors. Sharing stories. A curated sanctuary of recipes honoring global culinary heritage.
+        </p>
+        <div class="social-links">
+          <a href="#" class="social-icon" aria-label="Instagram">IG</a>
+          <a href="#" class="social-icon" aria-label="Pinterest">PI</a>
+          <a href="#" class="social-icon" aria-label="YouTube">YT</a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">The Cuisines</h4>
+        <ul class="footer-links">
+          <li><a href="recipes.html?category=Indian">Indian Royalty</a></li>
+          <li><a href="recipes.html?category=Italian">Italian Classics</a></li>
+          <li><a href="recipes.html?category=Chinese">Chinese Wok Heritage</a></li>
+          <li><a href="recipes.html?category=Middle%20Eastern">Middle Eastern Mezze</a></li>
+          <li><a href="recipes.html?category=Mexican">Mexican Tradition</a></li>
+          <li><a href="recipes.html?category=Thai">Thai Aromatics</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">The Chapters</h4>
+        <ul class="footer-links">
+          <li><a href="recipes.html">All 65 Dishes</a></li>
+          <li><a href="add-recipe.html">Pen a Recipe</a></li>
+          <li><a href="login.html">Member Access</a></li>
+          <li><a href="register.html">Join the Table</a></li>
+          <li><a href="user.html">Personal Storybook</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">The Kitchen Pledge</h4>
+        <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.6;">
+          Every recipe is tested for balance, flavor, and emotional warmth. Pure gastronomy, completely free from ordering or commercial noise.
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>&copy; 2026 Bite &amp; Bliss. All Rights Reserved.</div>
+      <div>Crafted in the spirit of fine dining &amp; romantic culinary storytelling.</div>
+    </div>
+  </footer>
+
+  <!-- Toast Container -->
+  <div class="toast-container" aria-live="polite"></div>
+
+  <!-- Shared Script -->
+  <script src="script.js"></script>
+</body>
+</html>

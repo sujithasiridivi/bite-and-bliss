@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Detail — Bite &amp; Bliss</title>
+  <meta name="description" content="Immerse in the culinary story, authentic ingredients, numbered preparation rituals, and macro breakdown for this handcrafted recipe.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-espresso">
+
+  <!-- STICKY HEADER -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-logo" aria-label="Bite and Bliss Home">
+        Bite <span class="ampersand">&amp;</span> Bliss
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="main-nav" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="recipes.html?category=Indian" class="nav-link">Indian</a></li>
+          <li><a href="recipes.html?category=Italian" class="nav-link">Italian</a></li>
+          <li><a href="recipes.html?category=Chinese" class="nav-link">Chinese</a></li>
+          <li><a href="recipes.html?category=Dessert" class="nav-link">Dessert</a></li>
+          <li><a href="recipes.html?category=Snacks" class="nav-link">Snacks</a></li>
+          <li><a href="recipes.html?category=Healthy" class="nav-link">Healthy</a></li>
+          <li><a href="recipes.html?category=Beverages" class="nav-link">Beverages</a></li>
+        </ul>
+
+        </nav>
+
+      <div class="header-actions" id="headerAuth">
+        <a href="login.html" class="nav-link">Login</a>
+        <a href="register.html" class="btn btn-sm btn-primary">Register</a>
+      </div>
+
+      <button class="mobile-menu-btn" aria-label="Toggle navigation menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Dynamic Single Recipe Container (populated by script.js initRecipeDetailPage()) -->
+    <div id="recipeDetailContainer">
+      <div class="container section-padding text-center">
+        <div class="gold-rule"></div>
+        <span class="gold-eyebrow">UNVEILING THE ARCHIVE</span>
+        <h2 class="chapter-title">Preparing the Culinary Tale...</h2>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="brand-logo">
+          Bite <span class="ampersand">&amp;</span> Bliss
+        </a>
+        <p class="footer-tagline">
+          Celebrating flavors. Sharing stories. A curated sanctuary of recipes honoring global culinary heritage.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">The Cuisines</h4>
+        <ul class="footer-links">
+          <li><a href="recipes.html?category=Indian">Indian Royalty</a></li>
+          <li><a href="recipes.html?category=Italian">Italian Classics</a></li>
+          <li><a href="recipes.html?category=Chinese">Chinese Wok Heritage</a></li>
+          <li><a href="recipes.html?category=Dessert">Midnight Sweetness</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="recipes.html">All Recipes</a></li>
+          <li><a href="add-recipe.html">Pen a Recipe</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">The Pledge</h4>
+        <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.6;">
+          An authentic culinary sanctuary designed for home cooks. No delivery, no ordering, pure taste.
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>&copy; 2026 Bite &amp; Bliss. All Rights Reserved.</div>
+      <div>Crafted in the spirit of fine dining &amp; romantic culinary storytelling.</div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" aria-live="polite"></div>
+
+  <!-- Shared Script -->
+  <script src="script.js"></script>
+</body>
+</html>

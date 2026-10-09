@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join the Table — Bite &amp; Bliss</title>
+  <meta name="description" content="Register your place at Bite & Bliss to save favorite dishes, pen your family heirloom recipes, and write tasting notes.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-espresso">
+
+  <!-- STICKY HEADER -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-logo" aria-label="Bite and Bliss Home">
+        Bite <span class="ampersand">&amp;</span> Bliss
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="main-nav" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="recipes.html?category=Indian" class="nav-link">Indian</a></li>
+          <li><a href="recipes.html?category=Italian" class="nav-link">Italian</a></li>
+          <li><a href="recipes.html?category=Chinese" class="nav-link">Chinese</a></li>
+          <li><a href="recipes.html?category=Dessert" class="nav-link">Dessert</a></li>
+          <li><a href="recipes.html?category=Snacks" class="nav-link">Snacks</a></li>
+          <li><a href="recipes.html?category=Healthy" class="nav-link">Healthy</a></li>
+          <li><a href="recipes.html?category=Beverages" class="nav-link">Beverages</a></li>
+        </ul>
+
+        </nav>
+
+      <div class="header-actions" id="headerAuth">
+        <a href="login.html" class="nav-link">Login</a>
+        <a href="register.html" class="btn btn-sm btn-primary active">Register</a>
+      </div>
+
+      <button class="mobile-menu-btn" aria-label="Toggle navigation menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <div class="auth-wrapper">
+      <div class="auth-card">
+        <div class="chapter-header" style="margin-bottom: 30px;">
+          <div class="gold-rule"></div>
+          <span class="gold-eyebrow">NEW EPICURE</span>
+          <h1 class="chapter-title" style="font-size: 2.3rem;">Join the Table</h1>
+          <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 0;">
+            Claim your seat in our culinary archive. Save recipes, write tasting notes, and celebrate authentic cooking.
+          </p>
+        </div>
+
+        <form id="registerForm">
+          <div class="form-group">
+            <label for="regName" class="form-label">Full Name or Title</label>
+            <input 
+              type="text" 
+              id="regName" 
+              class="form-input" 
+              placeholder="e.g. Lady Genevieve Vance" 
+              required 
+              autocomplete="name"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="regEmail" class="form-label">Email Address</label>
+            <input 
+              type="email" 
+              id="regEmail" 
+              class="form-input" 
+              placeholder="epicure@biteandbliss.com" 
+              required 
+              autocomplete="email"
+            />
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label for="regPassword" class="form-label">Password</label>
+              <input 
+                type="password" 
+                id="regPassword" 
+                class="form-input" 
+                placeholder="••••••••••••" 
+                required 
+                minlength="6"
+                autocomplete="new-password"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="regConfirmPassword" class="form-label">Confirm Password</label>
+              <input 
+                type="password" 
+                id="regConfirmPassword" 
+                class="form-input" 
+                placeholder="••••••••••••" 
+                required 
+                minlength="6"
+                autocomplete="new-password"
+              />
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 24px;">
+            <label style="display: flex; align-items: flex-start; gap: 10px; cursor: pointer; font-size: 0.85rem; color: var(--text-muted);">
+              <input type="checkbox" class="custom-checkbox" required checked />
+              <span>I pledge to honor authentic ingredients and celebrate the joy of home-cooked gastronomy.</span>
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px;">
+            Claim Your Seat
+          </button>
+        </form>
+
+        <div style="text-align: center; margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--hairline-gold); font-size: 0.9rem; color: var(--text-muted);">
+          Already have a place at our table? 
+          <a href="login.html" style="color: var(--antique-gold); font-weight: 600; margin-left: 4px;">
+            Enter here →
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="brand-logo">
+          Bite <span class="ampersand">&amp;</span> Bliss
+        </a>
+        <p class="footer-tagline">
+          Celebrating flavors. Sharing stories. A curated sanctuary of recipes honoring global culinary heritage.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">The Cuisines</h4>
+        <ul class="footer-links">
+          <li><a href="recipes.html?category=Indian">Indian Royalty</a></li>
+          <li><a href="recipes.html?category=Italian">Italian Classics</a></li>
+          <li><a href="recipes.html?category=Chinese">Chinese Wok Heritage</a></li>
+          <li><a href="recipes.html?category=Dessert">Midnight Sweetness</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="recipes.html">All Recipes</a></li>
+          <li><a href="login.html">Sign In</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">The Pledge</h4>
+        <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.6;">
+          An authentic culinary sanctuary designed for home cooks. No delivery, no ordering, pure taste.
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>&copy; 2026 Bite &amp; Bliss. All Rights Reserved.</div>
+      <div>Crafted in the spirit of fine dining &amp; romantic culinary storytelling.</div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" aria-live="polite"></div>
+
+  <!-- Shared Script -->
+  <script src="script.js"></script>
+
+  <!-- Registration Form Specific Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('registerForm');
+      if (form) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const name = document.getElementById('regName').value;
+          const email = document.getElementById('regEmail').value;
+          const pass = document.getElementById('regPassword').value;
+          const confirmPass = document.getElementById('regConfirmPassword').value;
+
+          if (pass !== confirmPass) {
+            showToast('The passwords do not match. Please verify.', 'danger');
+            return;
+          }
+
+          if (pass.length < 6) {
+            showToast('Password must be at least 6 characters.', 'warning');
+            return;
+          }
+
+          const result = registerUser(name, email, pass);
+          if (result.success) {
+            showToast(`Welcome to Bite & Bliss, ${result.user.name}! Your place is reserved.`, 'success');
+            setTimeout(() => {
+              window.location.href = 'user.html';
+            }, 900);
+          } else {
+            showToast(result.message || 'Unable to register account.', 'danger');
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>

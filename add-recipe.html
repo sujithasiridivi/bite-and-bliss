@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pen a Recipe — Bite &amp; Bliss</title>
+  <meta name="description" content="Contribute your family heirloom or crafted signature recipe to the Bite & Bliss royal gastronomic collection.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-espresso">
+
+  <!-- STICKY HEADER -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-logo" aria-label="Bite and Bliss Home">
+        Bite <span class="ampersand">&amp;</span> Bliss
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="main-nav" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="recipes.html?category=Indian" class="nav-link">Indian</a></li>
+          <li><a href="recipes.html?category=Italian" class="nav-link">Italian</a></li>
+          <li><a href="recipes.html?category=Chinese" class="nav-link">Chinese</a></li>
+          <li><a href="recipes.html?category=Dessert" class="nav-link">Dessert</a></li>
+          <li><a href="recipes.html?category=Snacks" class="nav-link">Snacks</a></li>
+          <li><a href="recipes.html?category=Healthy" class="nav-link">Healthy</a></li>
+          <li><a href="recipes.html?category=Beverages" class="nav-link">Beverages</a></li>
+        </ul>
+
+        </nav>
+
+      <div class="header-actions" id="headerAuth">
+        <a href="login.html" class="nav-link">Login</a>
+        <a href="register.html" class="btn btn-sm btn-primary">Register</a>
+      </div>
+
+      <button class="mobile-menu-btn" aria-label="Toggle navigation menu">☰</button>
+    </div>
+  </header>
+
+  <main class="section-padding" style="padding-top: 50px;">
+    <div class="container">
+      <div class="chapter-header">
+        <div class="gold-rule"></div>
+        <span class="gold-eyebrow">CONTRIBUTE TO THE TABLE</span>
+        <h1 class="chapter-title">Pen a New Tale</h1>
+        <p class="chapter-subtitle">
+          Immortalize your signature culinary creation. Share authentic proportions, secret seasoning rituals, and heartfelt tasting notes.
+        </p>
+      </div>
+
+      <!-- Add Recipe Form Container -->
+      <div class="form-card-wide">
+        <form id="addRecipeForm">
+          <!-- SECTION 1: DISH IDENTITY -->
+          <div class="form-section-title">I. Plate Identity &amp; Heritage</div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label for="recipeTitle" class="form-label">Dish Title *</label>
+              <input 
+                type="text" 
+                id="recipeTitle" 
+                class="form-input" 
+                placeholder="e.g. Saffron Cardamom Brioche" 
+                required 
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="recipeCategory" class="form-label">Cuisine Category *</label>
+              <select id="recipeCategory" class="form-select" required>
+                <option value="Indian">Indian</option>
+                <option value="Italian">Italian</option>
+                <option value="Chinese">Chinese</option>
+                <option value="Dessert">Dessert</option>
+                <option value="Snacks">Snacks</option>
+                <option value="Healthy">Healthy</option>
+                <option value="Beverages">Beverages</option>
+                <option value="Middle Eastern">Middle Eastern</option>
+                <option value="Mexican">Mexican</option>
+                <option value="Thai">Thai</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="recipeImage" class="form-label">Food Imagery URL (Unsplash or Direct Link)</label>
+            <input 
+              type="url" 
+              id="recipeImage" 
+              class="form-input" 
+              placeholder="https://images.unsplash.com/photo-...?auto=format&fit=crop&w=600&q=80" 
+            />
+            <p class="form-help">Leave empty to utilize our default royal presentation photography.</p>
+          </div>
+
+          <!-- SECTION 2: TIMING & MACROS -->
+          <div class="form-section-title">II. Timing &amp; Nutritional Harmony</div>
+
+          <div class="form-grid-3">
+            <div class="form-group">
+              <label for="recipeTime" class="form-label">Cooking Duration *</label>
+              <input 
+                type="text" 
+                id="recipeTime" 
+                class="form-input" 
+                placeholder="e.g. 35 mins" 
+                required 
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="recipeDifficulty" class="form-label">Difficulty Level *</label>
+              <select id="recipeDifficulty" class="form-select">
+                <option value="Easy">Easy (Gentle Ritual)</option>
+                <option value="Medium" selected>Medium (Crafted Focus)</option>
+                <option value="Hard">Hard (Masterpiece Craft)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="recipeCalories" class="form-label">Calories (kcal) *</label>
+              <input 
+                type="number" 
+                id="recipeCalories" 
+                class="form-input" 
+                placeholder="e.g. 420" 
+                required 
+              />
+            </div>
+          </div>
+
+          <div class="form-grid-3">
+            <div class="form-group">
+              <label for="recipeProtein" class="form-label">Protein (e.g. 18g)</label>
+              <input type="text" id="recipeProtein" class="form-input" placeholder="18g" />
+            </div>
+
+            <div class="form-group">
+              <label for="recipeFat" class="form-label">Fat / Lipids (e.g. 16g)</label>
+              <input type="text" id="recipeFat" class="form-input" placeholder="16g" />
+            </div>
+
+            <div class="form-group">
+              <label for="recipeCarbs" class="form-label">Carbohydrates (e.g. 45g)</label>
+              <input type="text" id="recipeCarbs" class="form-input" placeholder="45g" />
+            </div>
+          </div>
+
+          <!-- SECTION 3: INGREDIENTS & STEPS -->
+          <div class="form-section-title">III. Ingredients &amp; Preparation Ritual</div>
+
+          <div class="form-group">
+            <label for="recipeIngredients" class="form-label">Ingredients Required (One item per line) *</label>
+            <textarea 
+              id="recipeIngredients" 
+              class="form-textarea" 
+              rows="6" 
+              placeholder="250g artisanal paneer cubes&#10;4 ripe vine tomatoes, pureed&#10;3 tbsp cultured churned butter&#10;Pinch of toasted saffron threads" 
+              required
+            ></textarea>
+            <p class="form-help">Enter each noble ingredient on a new line to generate interactive checklist items.</p>
+          </div>
+
+          <div class="form-group">
+            <label for="recipeSteps" class="form-label">Preparation Steps (One step per line) *</label>
+            <textarea 
+              id="recipeSteps" 
+              class="form-textarea" 
+              rows="6" 
+              placeholder="Gently sear paneer in golden butter until crisp at edges.&#10;Simmer vine tomatoes with whole crushed spices until oil breaks out.&#10;Fold in sweet cream and finish with crushed aromatic herbs." 
+              required
+            ></textarea>
+            <p class="form-help">Enter each step on a new line to generate gold numbered ceremony badges.</p>
+          </div>
+
+          <div style="margin-top: 36px; text-align: center;">
+            <button type="submit" class="btn btn-primary" style="padding: 16px 45px; font-size: 0.9rem;">
+              Inscribe Recipe into Archive
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="brand-logo">
+          Bite <span class="ampersand">&amp;</span> Bliss
+        </a>
+        <p class="footer-tagline">
+          Celebrating flavors. Sharing stories. A curated sanctuary of recipes honoring global culinary heritage.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">The Cuisines</h4>
+        <ul class="footer-links">
+          <li><a href="recipes.html?category=Indian">Indian Royalty</a></li>
+          <li><a href="recipes.html?category=Italian">Italian Classics</a></li>
+          <li><a href="recipes.html?category=Chinese">Chinese Wok Heritage</a></li>
+          <li><a href="recipes.html?category=Dessert">Midnight Sweetness</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="recipes.html">All Recipes</a></li>
+          <li><a href="user.html">My Notebook</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">The Pledge</h4>
+        <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.6;">
+          An authentic culinary sanctuary designed for home cooks. No delivery, no ordering, pure taste.
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>&copy; 2026 Bite &amp; Bliss. All Rights Reserved.</div>
+      <div>Crafted in the spirit of fine dining &amp; romantic culinary storytelling.</div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" aria-live="polite"></div>
+
+  <!-- Shared Script -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Full Menu — Bite &amp; Bliss</title>
+  <meta name="description" content="Explore our full culinary collection of 65+ recipes across 10 global cuisines. Filter by heritage, ingredients, or cooking duration.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-espresso">
+
+  <!-- STICKY HEADER -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-logo" aria-label="Bite and Bliss Home">
+        Bite <span class="ampersand">&amp;</span> Bliss
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="main-nav" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="recipes.html?category=Indian" class="nav-link">Indian</a></li>
+          <li><a href="recipes.html?category=Italian" class="nav-link">Italian</a></li>
+          <li><a href="recipes.html?category=Chinese" class="nav-link">Chinese</a></li>
+          <li><a href="recipes.html?category=Dessert" class="nav-link">Dessert</a></li>
+          <li><a href="recipes.html?category=Snacks" class="nav-link">Snacks</a></li>
+          <li><a href="recipes.html?category=Healthy" class="nav-link">Healthy</a></li>
+          <li><a href="recipes.html?category=Beverages" class="nav-link">Beverages</a></li>
+        </ul>
+
+        </nav>
+
+      <div class="header-actions" id="headerAuth">
+        <a href="login.html" class="nav-link">Login</a>
+        <a href="register.html" class="btn btn-sm btn-primary">Register</a>
+      </div>
+
+      <button class="mobile-menu-btn" aria-label="Toggle navigation menu">☰</button>
+    </div>
+  </header>
+
+  <main class="section-padding" style="padding-top: 60px;">
+    <div class="container-wide">
+      <!-- Chapter Header -->
+      <div class="chapter-header">
+        <div class="gold-rule"></div>
+        <span class="gold-eyebrow">THE CULINARY ARCHIVE</span>
+        <h1 class="chapter-title">The Full Menu</h1>
+        <p class="chapter-subtitle">
+          Sixty-five distinct tales of spice, flame, and heritage gathered from ten culinary cultures across the world.
+        </p>
+      </div>
+
+      <!-- Search & Filter Bar -->
+      <div class="filter-bar">
+        <!-- Search Input -->
+        <div>
+          <label for="recipeSearch" class="form-label">Search by Dish or Ingredient</label>
+          <input 
+            type="text" 
+            id="recipeSearch" 
+            class="form-input" 
+            placeholder="Search e.g. Paneer, Risotto, Saffron, Cocoa..."
+          />
+        </div>
+
+        <!-- Category Dropdown -->
+        <div>
+          <label for="categoryFilter" class="form-label">Cuisine Tradition</label>
+          <select id="categoryFilter" class="form-select">
+            <option value="all">All 10 Cuisines</option>
+            <option value="Indian">Indian (10)</option>
+            <option value="Italian">Italian (7)</option>
+            <option value="Chinese">Chinese (7)</option>
+            <option value="Dessert">Dessert (8)</option>
+            <option value="Snacks">Snacks (8)</option>
+            <option value="Healthy">Healthy (6)</option>
+            <option value="Beverages">Beverages (6)</option>
+            <option value="Middle Eastern">Middle Eastern (5)</option>
+            <option value="Mexican">Mexican (4)</option>
+            <option value="Thai">Thai (4)</option>
+          </select>
+        </div>
+
+        <!-- Sort Filter -->
+        <div>
+          <label for="sortFilter" class="form-label">Sort By</label>
+          <select id="sortFilter" class="form-select">
+            <option value="default">Curated Order</option>
+            <option value="title">Alphabetical (A–Z)</option>
+            <option value="time">Cooking Time (Fastest)</option>
+            <option value="calories">Calories (Lightest)</option>
+          </select>
+        </div>
+
+        <!-- Add Recipe CTA Button -->
+        <div style="align-self: flex-end;">
+          <a href="add-recipe.html" class="btn btn-primary" style="height: 52px;">
+            + Pen Recipe
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Category Pills -->
+      <div class="filter-pills" aria-label="Quick Cuisine Filter Pills">
+        <button class="pill-filter active" data-category="all">All</button>
+        <button class="pill-filter" data-category="Indian">Indian</button>
+        <button class="pill-filter" data-category="Italian">Italian</button>
+        <button class="pill-filter" data-category="Chinese">Chinese</button>
+        <button class="pill-filter" data-category="Dessert">Dessert</button>
+        <button class="pill-filter" data-category="Snacks">Snacks</button>
+        <button class="pill-filter" data-category="Healthy">Healthy</button>
+        <button class="pill-filter" data-category="Beverages">Beverages</button>
+        <button class="pill-filter" data-category="Middle Eastern">Middle Eastern</button>
+        <button class="pill-filter" data-category="Mexican">Mexican</button>
+        <button class="pill-filter" data-category="Thai">Thai</button>
+      </div>
+
+      <!-- Results Count Status -->
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid var(--hairline-gold);">
+        <span id="resultsCount" style="font-family: var(--font-ui); font-size: 0.85rem; letter-spacing: 1px; color: var(--text-muted); text-transform: uppercase;">
+          Loading collection...
+        </span>
+        <span style="font-family: var(--font-ui); font-size: 0.8rem; color: var(--antique-gold);">
+          ✦ Click any heart to save to your personal book
+        </span>
+      </div>
+
+      <!-- Dynamic Recipes Grid (Rendered by script.js) -->
+      <div id="recipesGrid" class="recipe-grid"></div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="brand-logo">
+          Bite <span class="ampersand">&amp;</span> Bliss
+        </a>
+        <p class="footer-tagline">
+          Celebrating flavors. Sharing stories. A curated sanctuary of recipes honoring global culinary heritage.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">The Cuisines</h4>
+        <ul class="footer-links">
+          <li><a href="recipes.html?category=Indian">Indian Royalty</a></li>
+          <li><a href="recipes.html?category=Italian">Italian Classics</a></li>
+          <li><a href="recipes.html?category=Chinese">Chinese Wok Heritage</a></li>
+          <li><a href="recipes.html?category=Dessert">Midnight Sweetness</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="recipes.html">All Recipes</a></li>
+          <li><a href="add-recipe.html">Pen a Recipe</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">The Pledge</h4>
+        <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.6;">
+          An authentic culinary sanctuary designed for home cooks. No delivery, no ordering, pure taste.
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>&copy; 2026 Bite &amp; Bliss. All Rights Reserved.</div>
+      <div>Crafted in the spirit of fine dining &amp; romantic culinary storytelling.</div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" aria-live="polite"></div>
+
+  <!-- Shared Script -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard — Bite &amp; Bliss</title>
+  <meta name="description" content="Central administration portal for Bite & Bliss: manage culinary catalog, moderate user registrations, and view system statistics.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-espresso">
+
+  <!-- STICKY HEADER -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-logo" aria-label="Bite and Bliss Home">
+        Bite <span class="ampersand">&amp;</span> Bliss
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="main-nav" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="recipes.html?category=Indian" class="nav-link">Indian</a></li>
+          <li><a href="recipes.html?category=Italian" class="nav-link">Italian</a></li>
+          <li><a href="recipes.html?category=Chinese" class="nav-link">Chinese</a></li>
+          <li><a href="recipes.html?category=Dessert" class="nav-link">Dessert</a></li>
+          <li><a href="recipes.html?category=Snacks" class="nav-link">Snacks</a></li>
+          <li><a href="recipes.html?category=Healthy" class="nav-link">Healthy</a></li>
+          <li><a href="recipes.html?category=Beverages" class="nav-link">Beverages</a></li>
+        </ul>
+
+        </nav>
+
+      <div class="header-actions" id="headerAuth">
+        <a href="login.html" class="nav-link">Login</a>
+        <a href="register.html" class="btn btn-sm btn-primary">Register</a>
+      </div>
+
+      <button class="mobile-menu-btn" aria-label="Toggle navigation menu">☰</button>
+    </div>
+  </header>
+
+  <main class="section-padding" style="padding-top: 50px;" id="adminDashboard">
+    <div class="container-wide">
+      <!-- Admin Header Chapter -->
+      <div class="chapter-header text-left" style="margin-bottom: 40px;">
+        <div class="gold-rule left"></div>
+        <span class="gold-eyebrow">GRAND EPICURE STEWARDSHIP</span>
+        <h1 class="chapter-title">Kitchen Archive Administration</h1>
+        <p class="chapter-subtitle" style="margin-left: 0;">
+          Preserve the integrity of the 65+ recipes, moderate guestbook impressions, and supervise table memberships.
+        </p>
+      </div>
+
+      <!-- Admin Stat Boxes -->
+      <div class="dashboard-stats">
+        <div class="dash-stat-box">
+          <div class="dash-stat-number" id="adminTotalRecipes">63</div>
+          <div class="dash-stat-title">Catalog Recipes</div>
+        </div>
+
+        <div class="dash-stat-box">
+          <div class="dash-stat-number" id="adminTotalUsers">2</div>
+          <div class="dash-stat-title">Registered Members</div>
+        </div>
+
+        <div class="dash-stat-box">
+          <div class="dash-stat-number" id="adminTotalComments">3</div>
+          <div class="dash-stat-title">Guestbook Notes</div>
+        </div>
+
+        <div class="dash-stat-box" style="display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 10px;">
+          <button onclick="resetToDefaultData(); setTimeout(() => location.reload(), 500);" class="btn btn-secondary btn-sm" style="width: 100%;">
+            ↺ Restore 65 Seed Recipes
+          </button>
+          <a href="add-recipe.html" class="btn btn-primary btn-sm" style="width: 100%;">
+            + Inscribe New Recipe
+          </a>
+        </div>
+      </div>
+
+      <!-- RECIPE ARCHIVE MANAGEMENT TABLE -->
+      <div style="margin-bottom: 50px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+          <div>
+            <span class="gold-eyebrow" style="margin-bottom: 4px;">CULINARY CATALOG</span>
+            <h2 style="font-family: var(--font-heading); font-style: italic; font-size: 2rem;">
+              All Archived Dishes
+            </h2>
+          </div>
+          <span style="font-family: var(--font-ui); font-size: 0.8rem; color: var(--text-muted);">
+            Real-time Local Storage records
+          </span>
+        </div>
+
+        <div class="data-table-wrapper">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th style="width: 70px;">ID</th>
+                <th>Dish Title</th>
+                <th>Cuisine Heritage</th>
+                <th>Duration</th>
+                <th>Author</th>
+                <th style="text-align: right; width: 170px;">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="adminRecipesTableBody">
+              <!-- Populated by script.js -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- MEMBER MANAGEMENT TABLE -->
+      <div>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+          <div>
+            <span class="gold-eyebrow" style="margin-bottom: 4px;">MEMBERSHIP ROSTER</span>
+            <h2 style="font-family: var(--font-heading); font-style: italic; font-size: 2rem;">
+              Enrolled Epicures
+            </h2>
+          </div>
+          <span style="font-family: var(--font-ui); font-size: 0.8rem; color: var(--text-muted);">
+            Active session accounts
+          </span>
+        </div>
+
+        <div class="data-table-wrapper">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Member Name</th>
+                <th>Email Address</th>
+                <th>Role Standing</th>
+                <th>Registration Date</th>
+                <th style="text-align: right; width: 130px;">Action</th>
+              </tr>
+            </thead>
+            <tbody id="adminUsersTableBody">
+              <!-- Populated by script.js -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="brand-logo">
+          Bite <span class="ampersand">&amp;</span> Bliss
+        </a>
+        <p class="footer-tagline">
+          Celebrating flavors. Sharing stories. A curated sanctuary of recipes honoring global culinary heritage.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">The Cuisines</h4>
+        <ul class="footer-links">
+          <li><a href="recipes.html?category=Indian">Indian Royalty</a></li>
+          <li><a href="recipes.html?category=Italian">Italian Classics</a></li>
+          <li><a href="recipes.html?category=Chinese">Chinese Wok Heritage</a></li>
+          <li><a href="recipes.html?category=Dessert">Midnight Sweetness</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="recipes.html">All Recipes</a></li>
+          <li><a href="add-recipe.html">Pen a Recipe</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">The Pledge</h4>
+        <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.6;">
+          An authentic culinary sanctuary designed for home cooks. No delivery, no ordering, pure taste.
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>&copy; 2026 Bite &amp; Bliss. All Rights Reserved.</div>
+      <div>Crafted in the spirit of fine dining &amp; romantic culinary storytelling.</div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" aria-live="polite"></div>
+
+  <!-- Shared Script -->
+  <script src="script.js"></script>
+</body>
+</html>

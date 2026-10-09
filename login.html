@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Member Access — Bite &amp; Bliss</title>
+  <meta name="description" content="Enter the Bite & Bliss culinary table to access your saved recipes, write tasting notes, and preserve your favorite dishes.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-espresso">
+
+  <!-- STICKY HEADER -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-logo" aria-label="Bite and Bliss Home">
+        Bite <span class="ampersand">&amp;</span> Bliss
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="main-nav" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="recipes.html?category=Indian" class="nav-link">Indian</a></li>
+          <li><a href="recipes.html?category=Italian" class="nav-link">Italian</a></li>
+          <li><a href="recipes.html?category=Chinese" class="nav-link">Chinese</a></li>
+          <li><a href="recipes.html?category=Dessert" class="nav-link">Dessert</a></li>
+          <li><a href="recipes.html?category=Snacks" class="nav-link">Snacks</a></li>
+          <li><a href="recipes.html?category=Healthy" class="nav-link">Healthy</a></li>
+          <li><a href="recipes.html?category=Beverages" class="nav-link">Beverages</a></li>
+        </ul>
+
+        </nav>
+
+      <div class="header-actions" id="headerAuth">
+        <a href="login.html" class="nav-link active">Login</a>
+        <a href="register.html" class="btn btn-sm btn-primary">Register</a>
+      </div>
+
+      <button class="mobile-menu-btn" aria-label="Toggle navigation menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <div class="auth-wrapper">
+      <div class="auth-card">
+        <div class="chapter-header" style="margin-bottom: 30px;">
+          <div class="gold-rule"></div>
+          <span class="gold-eyebrow">WELCOME BACK</span>
+          <h1 class="chapter-title" style="font-size: 2.3rem;">Return to the Table</h1>
+          <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 0;">
+            Sign in to unlock your personal culinary notebook and saved dishes.
+          </p>
+        </div>
+
+        <form id="loginForm">
+          <div class="form-group">
+            <label for="loginEmail" class="form-label">Email Address</label>
+            <input 
+              type="email" 
+              id="loginEmail" 
+              class="form-input" 
+              placeholder="e.g. epicure@biteandbliss.com" 
+              required 
+              autocomplete="email"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="loginPassword" class="form-label">Secret Key (Password)</label>
+            <input 
+              type="password" 
+              id="loginPassword" 
+              class="form-input" 
+              placeholder="••••••••••••" 
+              required 
+              autocomplete="current-password"
+            />
+          </div>
+
+          <div style="margin-bottom: 24px; display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem;">
+            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; color: var(--text-muted);">
+              <input type="checkbox" class="custom-checkbox" checked />
+              <span>Remember my seat</span>
+            </label>
+            <a href="#" onclick="showToast('Password recovery token sent to your email.', 'info'); return false;" style="color: var(--antique-gold); font-size: 0.8rem; letter-spacing: 0.5px;">
+              Forgotten key?
+            </a>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px;">
+            Enter the Kitchen
+          </button>
+        </form>
+
+        <!-- Quick Demo Credentials Box for Easy Review -->
+        <div style="margin-top: 28px; padding: 16px; border-radius: var(--radius-sm); background: rgba(42, 16, 24, 0.4); border: 1px dashed var(--hairline-gold); font-size: 0.8rem; color: var(--text-muted);">
+          <strong style="color: var(--antique-gold); display: block; margin-bottom: 4px; letter-spacing: 1px; text-transform: uppercase;">
+            ✦ Royal Demo Accounts
+          </strong>
+          <div><strong>Admin:</strong> admin@biteandbliss.com | admin123</div>
+          <div><strong>Member:</strong> genevieve@biteandbliss.com | password123</div>
+        </div>
+
+        <div style="text-align: center; margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--hairline-gold); font-size: 0.9rem; color: var(--text-muted);">
+          New to our culinary circle? 
+          <a href="register.html" style="color: var(--antique-gold); font-weight: 600; margin-left: 4px;">
+            Register for your place →
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="brand-logo">
+          Bite <span class="ampersand">&amp;</span> Bliss
+        </a>
+        <p class="footer-tagline">
+          Celebrating flavors. Sharing stories. A curated sanctuary of recipes honoring global culinary heritage.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">The Cuisines</h4>
+        <ul class="footer-links">
+          <li><a href="recipes.html?category=Indian">Indian Royalty</a></li>
+          <li><a href="recipes.html?category=Italian">Italian Classics</a></li>
+          <li><a href="recipes.html?category=Chinese">Chinese Wok Heritage</a></li>
+          <li><a href="recipes.html?category=Dessert">Midnight Sweetness</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="recipes.html">All Recipes</a></li>
+          <li><a href="add-recipe.html">Pen a Recipe</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">The Pledge</h4>
+        <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.6;">
+          An authentic culinary sanctuary designed for home cooks. No delivery, no ordering, pure taste.
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>&copy; 2026 Bite &amp; Bliss. All Rights Reserved.</div>
+      <div>Crafted in the spirit of fine dining &amp; romantic culinary storytelling.</div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" aria-live="polite"></div>
+
+  <!-- Shared Script -->
+  <script src="script.js"></script>
+
+  <!-- Login Form Specific Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('loginForm');
+      if (form) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const email = document.getElementById('loginEmail').value;
+          const password = document.getElementById('loginPassword').value;
+
+          const result = loginUser(email, password);
+          if (result.success) {
+            showToast(`Welcome back, ${result.user.name}. Entering the table...`, 'success');
+            
+            // Check for redirect parameter or send to user/admin dashboard
+            const urlParams = new URLSearchParams(window.location.search);
+            const redirect = urlParams.get('redirect');
+            
+            setTimeout(() => {
+              if (redirect) {
+                window.location.href = redirect;
+              } else if (result.user.isAdmin) {
+                window.location.href = 'admin.html';
+              } else {
+                window.location.href = 'user.html';
+              }
+            }, 800);
+          } else {
+            showToast(result.message || 'Credentials not recognized.', 'danger');
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>
